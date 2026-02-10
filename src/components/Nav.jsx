@@ -32,7 +32,7 @@ export function Nav() {
       </div>
 
     
-      <div className="fixed top-5 right-6 z-50 flex gap-14 text-lg">
+      <div className="fixed top-5 right-6 z-50 flex gap-14 text-lg bg-white rounded-[50px] px-2 py-1">
         <span className="cursor-pointer">&#9776;</span>
         <span className="cursor-pointer">&#128722;</span>
       </div>

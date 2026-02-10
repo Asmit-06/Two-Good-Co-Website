@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import { Nav } from './components/Nav'
 import { Page1 } from './components/Page1'
+import { Page2 } from './components/Page2';
 function App() {
 
   const navRef = useRef(null);
@@ -47,7 +48,7 @@ function App() {
   <>
   <Nav  navRef={navRef}/>
   <Page1 page1Ref={page1Ref}/>
- 
+  <Page2/>
   </>
  
  )
