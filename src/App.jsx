@@ -6,6 +6,7 @@ import { Nav } from './components/Nav'
 import { Page1 } from './components/Page1'
 import { Page2 } from './components/Page2';
 import { Page3 } from './components/Page3';
+import { Messages } from './components/Messages';
 function App() {
 
   const navRef = useRef(null);
@@ -51,6 +52,7 @@ function App() {
   <Page1 page1Ref={page1Ref}/>
   <Page2/>
   <Page3/>
+  <Messages/>
   </>
  
  )
