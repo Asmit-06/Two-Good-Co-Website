@@ -13,12 +13,12 @@ export function Footer() {
           start:"top 80%",
         }
       }
-    ).from("h1",{
+    ).from(".emailAdd",{
       opacity:0,
       xPercent:-100,
       ease:"power3.out",
       duration:0.6
-    }).from("span",{
+    }).from(".arrow",{
       opacity:0,
       ease:"power3.out",
       duration:0.6
@@ -47,10 +47,10 @@ export function Footer() {
     <footer id="footer" className="px-6 py-6 flex flex-col ">
       <div className="email ">
         <div className="flex justify-between items-center">
-          <h1 className="uppercase font-bold text-5xl tracking-tight">
+          <h1 className="emailAdd uppercase font-bold text-5xl tracking-tight">
             enter your email address for good
           </h1>
-          <span className="text-2xl">&#10132;</span>
+          <span className="text-2xl arrow">&#10132;</span>
         </div>
         <div className="emailLine w-full h-px bg-gray-800 mt-3"></div>
       </div>
