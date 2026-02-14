@@ -3,14 +3,16 @@ import { useEffect } from "react"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/all"
 import { useRef } from "react"
+import { useMediaQuery } from "react-responsive"
 gsap.registerPlugin(ScrollTrigger)
 export function Page3(){
  const page3Ref = useRef(null)
+ const isMobile = useMediaQuery({maxWidth:425})
   useGSAP(()=>{
    gsap.timeline({
     scrollTrigger:{
       trigger:page3Ref.current,
-      start:"top 45%",
+      start:isMobile?"top 160%":"top 45%",
       
     }
    }).from('.prodDiv1',{
@@ -20,7 +22,7 @@ export function Page3(){
     duration:0.7,
     ease:"power3.out"
    })
-  },[])
+  },[isMobile])
   useGSAP(()=>{
    gsap.timeline({
     scrollTrigger:{
@@ -79,13 +81,13 @@ export function Page3(){
     <section id="page3" className="px-6 py-48 flex items-center justify-center relative" ref={page3Ref}>
       <div id="cursor" className="fixed top-0 left-0 pointer-events-none z-[-1] w-60 h-60 bg-[#f7f7f7] rounded-[50%]" />
 
-      <div className="container  grid  sm:grid-cols-1 lg:grid-cols-2 gap-44">
+      <div className="container  grid   lg:grid-cols-2 gap-44">
         <div className="prodDiv1 flex flex-col items-center" >
           <img className="w-full h-full" src="https://cdn.sanity.io/images/w8f1ak3c/production/6e756f1fb46baa494c240edfc85ccbf3a1b2f14f-2000x3000.png/AB5I5869_Sweet_mem_book_NikkiTo-LoRes.png?rect=0,485,2000,2104&fp-x=0.5404411764705882&fp-y=0.5355036764705883&w=1024&h=1077&fit=crop&crop=focalpoint&auto=format" alt="" />
           <p className="text-[13px] font-light">Sweet Memories Cookbook</p>
           <p className="font-extralight text-[12px]">$75</p>
         </div>
-        <div className="prodDiv1 flex flex-col items-center">
+        <div className="prodDiv1 flex flex-col  items-center">
           <img className="w-full h-full" src="https://cdn.sanity.io/images/w8f1ak3c/production/eff054cb9dbd394a446ca9ddcadca3c097d1adf5-3635x5453.png/AB5I6014_Nostolgia_Ceramic_Set__NikkiTo.png?rect=0,1589,3635,3530&fp-x=0.5&fp-y=0.6150808823529413&w=1024&h=994&fit=crop&crop=focalpoint&auto=format" alt="" />
           <p className="text-[13px] font-light">Pepe Saya x Two Good Nostalgia Ceramics Set</p>
           <p className="font-extralight text-[12px]">$100</p>

@@ -19,7 +19,8 @@ export function Impact(){
     })
   },[])
   return(
-    <section id="impact" className="px-6 pt-96 pb-20 flex gap-56 ">
+    <section id="impact" className="px-6 pt-96 pb-20
+     flex gap-56 ">
        <div className="left w-[22%]  flex flex-col ">
           <h1 className="uppercase font-bold text-2xl mb-6">Our impact.</h1>
           <p className="tracking-tight font-light mb-6">The thing is, we don't save anyone.</p>

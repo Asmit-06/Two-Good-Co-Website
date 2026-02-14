@@ -11,3 +11,228 @@
   background: black;
   color: white;
 }
+
+
+@media screen and (max-width: 425px) {
+
+ .navH2{
+   font-size: 5rem;
+ }
+
+ .navUl{
+  font-size: 2rem;
+  margin-right: 10px;
+ }
+
+ .navCart{
+  font-size: 2rem;
+ }
+ .page1h1{
+  /* text-align: center; */
+  margin-top: 5rem;
+  font-size: 20rem;
+  margin-top: 35rem;
+  margin-left:60rem;
+  line-height: 0.9;
+ }
+  .imgDiv{
+    width:83em;
+    margin:auto;
+    margin-left: 40px;
+    margin-bottom:15rem
+  }
+ .imgDiv img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+ }
+
+ .page1text{
+  width:85rem;
+  text-align: center;
+  margin: auto;
+ }
+
+ .page1text h2{
+  font-size: 10rem;
+  letter-spacing: -8px;
+ }
+
+ .page1text p{
+  font-size: 2.1rem;
+  width:30rem;
+  margin-bottom: 30px;
+ }
+
+ #page2{
+  width:86.5rem;
+    
+ }
+  .headline{
+    margin-left:30px;
+  }
+ .paras p{
+  font-size: 2.5rem;
+ }
+ .images{
+  flex-direction: column;
+  margin-left: 40px;
+ }
+
+ .shop{
+  gap:3rem
+ }
+
+
+ .shop span,.shop p{
+  font-size: 2.3rem;
+
+  
+ }
+
+ .extra{
+  flex-direction: column;
+  align-items:center;
+  text-align:center;
+  width:100%;
+  margin-left:90px;
+ }
+
+ .extra h1{
+  font-size: 6.3rem;
+  margin-bottom: 30px;
+ }
+ 
+ .page2extra{
+  margin-right: 45rem;
+  gap:30px
+ }
+
+ .extra p{
+  font-size: 40px;
+  width:50rem;
+  text-align:center;
+  
+ }
+
+ #page3{
+  width:90rem;
+  padding: 5rem;
+  margin-bottom: 8rem;
+  
+  /* height:100vh; */
+ }
+  .container{
+    grid-template-columns: 1fr 1fr;
+    
+  }
+
+  .container p{
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  #messages{
+    width:90rem
+  }
+
+  .msg p{
+    font-size:2.4rem;
+  }
+
+  .circ{
+    width:50px;
+    height:50px;
+    margin-bottom: 20px;
+  }
+
+  .testimonials p{
+  font-size: 2.2rem;
+  }
+
+  #messages button{
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+
+  .msgsp{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  #impact{
+    width: 80rem;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  #impact .right{
+    width: 100%;
+    padding-left: 2.4rem;
+    gap:3rem;
+  }
+
+  #impact .left{
+    width: 100%;
+    padding-left:2.4rem;
+  }
+
+  #impact .left h1{
+    font-size: 5rem;
+  }
+
+  #impact .left p{
+    font-size: 3.2rem;
+    margin-bottom: 50px;
+  }
+  #impact .left p:nth-child(5){
+    margin-bottom: 0;
+    font-size: 2.5rem;
+  }
+
+  footer{
+    margin-top: 6rem;
+    width: 85rem;
+
+  }
+
+  .email{
+    padding-left: 4rem;
+  }
+
+  .email h1{
+    font-size: 3.3rem;
+  }
+
+  .email span{
+    font-size:4rem
+  }
+
+  .links p{
+    font-size: 3rem;
+  }
+
+  .links {
+    padding-left: 4rem;
+  }
+
+  .links svg{
+    opacity: 0;
+  }
+  .forMobile{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+
+   .second p{
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
+
+  .last p{
+    font-size: 2.9rem;
+    text-align: center;
+  }
+}

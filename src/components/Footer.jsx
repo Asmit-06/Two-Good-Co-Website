@@ -1,16 +1,19 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { useMediaQuery } from "react-responsive";
 gsap.registerPlugin(ScrollTrigger)
 
 export function Footer() {
+  const isMobile = useMediaQuery({ maxWidth: 425 });
+
 
   useGSAP(()=>{
     gsap.timeline(
       {
         scrollTrigger:{
           trigger:"#footer",
-          start:"top 80%",
+          start:isMobile?"top 300%":"top 80%",
         }
       }
     ).from(".emailAdd",{
@@ -31,7 +34,7 @@ export function Footer() {
       {
         scrollTrigger:{
           trigger:"#footer",
-          start:"top 65%",
+          start:isMobile?"top 300%":"top 65%",
         }
       }
     ).from("svg path",{
@@ -56,7 +59,7 @@ export function Footer() {
       </div>
 
       <div className="links mt-46 mb-18">
-        <div className="flex items-center justify-between">
+        <div className="first flex items-center justify-between">
           <div className="left text-[13px]">
             <p className="uppercase text-gray-400 text-[12px] mb-4">connect with us</p>
             <p>Facebook</p>
@@ -120,15 +123,20 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="flex gap-6 text-[12px] font-light uppercase tracking-tight text-gray-400 mx-auto">
+
+      <div className="forMobile">
+      <div className="second flex gap-6 text-[12px] font-light uppercase tracking-tight text-gray-400 mx-auto">
         <p>© Two Good Co. 2026</p>
         <p>Terms of Use</p>
         <p>privacy policy</p>
       </div>
 
-      <div className="mx-auto text-center text-[13px] w-6xl mt-10">
+      <div className="last mx-auto text-center text-[13px] w-6xl mt-10">
         <p>We are proud and privileged to have our home on this land, and to be able to continue the long tradition of community coming together around food, begun thousands of years ago by First Nations peoples. As we stand together on this unceded land, we acknowledge our First Nations people, are the original custodians of this land, and we recognise their deep connection to land, water, sky and community which continues today. We pay our deep respects to community elders, past, present and emerging, for they hold the memories, the traditions, the culture and hopes of Aboriginal and Torres Strait Islander peoples. Always was, always will be Aboriginal land.</p>
       </div>
+      </div>
+
+     
     </footer>
   );
 }

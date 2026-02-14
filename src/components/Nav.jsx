@@ -26,20 +26,20 @@ export function Nav() {
     <>
     
       <div className="fixed top-6 left-6 z-50 font-bold text-4xl leading-[0.8] tracking-tighter">
-        <h2>
+        <h2 className="navH2">
           TWO <br /> GOOD <br /> CO.
         </h2>
       </div>
 
     
-      <div className="fixed top-5 right-6 z-50 flex gap-14 text-lg bg-white rounded-[50px] px-2 py-1">
+      <div className="navCart fixed top-5 right-6 z-50 flex gap-14 text-lg bg-white rounded-[50px] px-2 py-1">
         <span className="cursor-pointer">&#9776;</span>
         <span className="cursor-pointer">&#128722;</span>
       </div>
 
       <ul
         ref={ulRef}
-        className="fixed top-6 right-48 flex uppercase font-light text-[12px] gap-16 cursor-pointer"
+        className="navUl fixed top-6 right-48 flex uppercase font-light text-[12px] gap-16 cursor-pointer"
       >
         <li>Shop</li>
         <li>Wholesale</li>

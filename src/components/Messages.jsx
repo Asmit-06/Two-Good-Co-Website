@@ -2,6 +2,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { useRef, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 gsap.registerPlugin(ScrollTrigger);
 export function Messages() {
   const msgs = [
@@ -13,7 +14,7 @@ export function Messages() {
   ];
 
   const [isActive, setisActive] = useState(0);
-
+  const isMobile = useMediaQuery({ maxWidth: 425 });
   const handleActive = (index) => {
     setisActive(index);
 
@@ -29,7 +30,7 @@ export function Messages() {
       .timeline({
         scrollTrigger: {
           trigger: "#messages",
-          start: "top 80%",
+          start: isMobile? "top 170%":"top 80%",
         },
       })
       .from(".msgLine", {
@@ -46,7 +47,7 @@ export function Messages() {
         },
         "<"
       );
-  }, []);
+  }, [isMobile]);
   return (
     <section id="messages" className="px-6 py-6 flex flex-col gap-18 ">
       <div className="msg flex flex-col">
@@ -61,7 +62,7 @@ export function Messages() {
         <div className="flex flex-col gap-6">
           <div
             onClick={() => handleActive(0)}
-            className={`w-4 h-4 border rounded-full cursor-pointer ${
+            className={`circ w-4 h-4 border rounded-full cursor-pointer ${
               isActive === 0 ? "bg-black" : ""
             }`}
           ></div>
@@ -73,7 +74,7 @@ export function Messages() {
         <div className="flex flex-col gap-6">
           <div
             onClick={() => handleActive(1)}
-            className={`w-4 h-4 border rounded-full cursor-pointer ${
+            className={`circ w-4 h-4 border rounded-full cursor-pointer ${
               isActive === 1 ? "bg-black" : ""
             }`}
           ></div>
@@ -85,7 +86,7 @@ export function Messages() {
         <div className="flex flex-col gap-6">
           <div
             onClick={() => handleActive(2)}
-            className={`w-4 h-4 border rounded-full cursor-pointer ${
+            className={`circ w-4 h-4 border rounded-full cursor-pointer ${
               isActive === 2 ? "bg-black" : ""
             }`}
           ></div>
@@ -97,7 +98,7 @@ export function Messages() {
         <div className="flex flex-col gap-6">
           <div
             onClick={() => handleActive(3)}
-            className={`w-4 h-4 border rounded-full cursor-pointer ${
+            className={`circ w-4 h-4 border rounded-full cursor-pointer ${
               isActive === 3 ? "bg-black" : ""
             }`}
           ></div>
@@ -109,7 +110,7 @@ export function Messages() {
         <div className="flex flex-col gap-6">
           <div
             onClick={() => handleActive(4)}
-            className={`w-4 h-4 border rounded-full cursor-pointer ${
+            className={`circ w-4 h-4 border rounded-full cursor-pointer ${
               isActive === 4 ? "bg-black" : ""
             }`}
           ></div>
@@ -120,7 +121,7 @@ export function Messages() {
         </div>
       </div>
 
-      <div className="peopleMsg mx-auto flex flex-col gap-8 items-center w-[85rem]">
+      <div className="peopleMsg mx-auto flex flex-col gap-8 items-center max-w-[85rem]">
         {isActive !== null && (
           <p className="font-bold text-7xl uppercase tracking-tight text-center mt-4 mb-10">
             {msgs[isActive]}
@@ -130,7 +131,7 @@ export function Messages() {
         <button className="text-white text-[13px] bg-black px-20 py-6 rounded-[50px] cursor-pointer">
           SEND YOUR OWN MESSAGE
         </button>
-        <p className="leading-4 text-center font-light">
+        <p className="msgsp leading-4 text-center font-light">
           Sometimes it’s the smallest actions <br /> that can make the biggest
           impact.
         </p>

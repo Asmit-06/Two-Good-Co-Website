@@ -80,7 +80,7 @@ export function Page2() {
       </div>
 
       {/* IMAGES ROW */}
-      <div className="images flex gap-4 mt-4">
+      <div className="images flex  gap-4 mt-4">
         {/* IMAGE WITH OVERLAY CARD */}
         <div className="imgdiv flex-1 overflow-hidden h-[110vh] relative">
           <img
@@ -130,7 +130,7 @@ export function Page2() {
           We believe in people, <br /> until they believe in <br />
           themselves again.
         </h1>
-        <div className="flex flex-col w-[20vw] ">
+        <div className="page2extra flex flex-col w-[20vw] ">
           <p className="tracking-tight font-light mb-5">
             Everything we do is designed to rebuild self worth and independence,
             in order to break free from the cycle of disadvantage.

@@ -36,7 +36,7 @@ export function Page1({ page1Ref }) {
       className="px-6 py-6 mt-38 flex flex-col items-center"
       ref={page1Ref}
     >
-      <h1 className="font-bold text-[33vh] tracking-tighter leading-[26vh] mb-1.5">
+      <h1 className="page1h1 font-bold text-[33vh] tracking-tighter leading-[26vh] mb-1.5">
         {["CHANGE", "THE", "COURSE"].map((word, i) => (
           <span key={i} className="word inline-block mr-6">
             {word}
@@ -51,7 +51,7 @@ export function Page1({ page1Ref }) {
         />
       </div>
 
-      <div className="text flex flex-col items-center">
+      <div className="page1text text flex flex-col items-center">
         <h2 className="font-bold text-5xl mb-5">LATHER. RINSE. REBUILD.</h2>
         <p className="text-[13px] tracking-tight mb-5">
           Nourishes the skin. Promotes healing. Supports women living in crisis.
